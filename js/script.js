@@ -4,9 +4,13 @@ const cpf = document.getElementById("cpf");
 const email = document.getElementById("email");
 const cep = document.getElementById("cep");
 const street = document.getElementById("street");
+const number = document.getElementById("number");
+const bairro = document.getElementById("bairro");
+const city = document.getElementById("city");
+const state = document.getElementById("state");
 const password = document.getElementById("password");
 const passwordConfirmation = document.getElementById("password-confirmation");
-const message = document.querySelector('#message');
+const message = document.getElementById('message');
 
 //Busca CEP
 cep.addEventListener('focusout', async()=> {
@@ -18,9 +22,7 @@ cep.addEventListener('focusout', async()=> {
             throw {cep_error: 'Cep invalido'};
         }
 
-        //const response = await fetch('https://viacep.com.br/ws/${cep.value}/json/');
         const response = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
-
 
         if (!response.ok) {
             throw await response.json();
@@ -28,6 +30,9 @@ cep.addEventListener('focusout', async()=> {
 
         const responseCep = await response.json();
         street.value = responseCep.logradouro;
+        bairro.value = responseCep.bairro;
+        city.value = responseCep.localidade;
+        state.value = responseCep.uf;
 
 
     } catch (error){
