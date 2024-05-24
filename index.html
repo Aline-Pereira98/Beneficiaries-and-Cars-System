@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Formulário</title>
 </head>
 <body>
@@ -58,13 +59,13 @@
 
             <div class="form-content">
                 <label for="city">Cidade</label>
-                <input type="text" id="city" placeholder="Digite a cidade">
+                <input type="city" id="city" placeholder="Digite a cidade">
                 <a>Cidade obrigatório</a>
             </div>
             
             <div class="form-content">
                 <label for="state">Estado</label>
-                <input type="text" id="state" placeholder="Digite o estado">
+                <input type="state" id="state" placeholder="Digite o estado">
                 <a>Estado obrigatório</a>
             </div>
 
@@ -79,11 +80,12 @@
                 <input type="password" id="password-confirmation" placeholder="Confirmacao de senha">
                 <a>Confirme a senha</a>
             </div>
-
+            <!-- <button type="button" id="submit-btn">Cadastrar</button> -->
             <button type="submit">Cadastrar</button>
 
         </form>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./js/script-copy.js"></script>
+    
 </body>
 </html>
