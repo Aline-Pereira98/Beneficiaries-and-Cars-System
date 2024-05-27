@@ -13,35 +13,35 @@
             <h2>Novo cadastro</h2>
         </section>
 
-        <form id="form" class="form">
+        <form action="cadastrar_carro.php" method="post" id="form" class="form">
             <div class="form-content">
                 <label for="placa">Placa</label>
-                <input type="text" id="placa" placeholder="Digite a placa">
+                <input type="text" id="placa" name="placa" placeholder="Digite a placa">
                 <a>Placa obrigatória</a>
             </div>
 
             <div class="form-content">
                 <label for="chassi">Chassi</label>
-                <input type="text" id="chassi" placeholder="Digite o chassi">
+                <input type="text" id="chassi" name="chassi" placeholder="Digite o chassi">
                 <a>Chassi obrigatório</a>
             </div>
 
             <span id="message"></span>
             <div class="form-content">
                 <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" placeholder="Digite o modelo">
+                <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo">
                 <a>Modelo obrigatório</a>
             </div>
 
             <div class="form-content">
                 <label for="montadora">Montadora</label>
-                <input type="text" id="montadora" placeholder="Digite a montadora">
+                <input type="text" id="montadora" name="montadora" placeholder="Digite a montadora">
                 <a>Montadora obrigatória</a>
             </div>
 
             <div class="form-content">
                 <label for="situacao">Situação</label>
-                <input type="text" id="situacao" placeholder="Escolha a situação">
+                <input type="text" id="situacao" name="situacao" placeholder="Escolha a situação">
                 <a>Situação obrigatória</a>
             </div>
             
@@ -50,7 +50,7 @@
 
         </form>
     </div>
-    <script src="../js/script-copy.js"></script>
+    <script src="../js/script-cars.js"></script>
     
 </body>
 </html>
